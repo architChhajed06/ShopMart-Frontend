@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Home</title>
+
+
+    <style>
+
+        /* BODY */
+        body
+        {
+            margin:0px;
+        }
+        /* HEADER SECTION*/
+        .container
+        {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            /* background-color: rgba(37, 34, 34, 0.909); */
+        }
+
+
+        .container::before
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Shopping_Graph_hero_2.jpg');
+            opacity: 1;
+            z-index: -1;
+            height: 352px;
+            width: 100%;
+        }
+
+        /* HEADER: LOGO */
+        .logo
+        {
+            color: white;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            width: 10%;
+        }        .logo:hover
+        {
+            cursor: pointer;
+        }
+
+        .logo img
+        {
+            width: 71px;
+            height: 72px;
+        }
+
+
+        /* HEADER: NAVBAR */
+
+
+        nav
+        {
+            width: 450px;
+            /* background-color: white; */
+            border-radius: 20px;
+        }
+
+        nav ul
+        {
+            list-style-type:none;
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            padding: 0px;
+            margin:0px 0px;
+        }
+
+        /* nav ul li
+        {
+            background-color: white;
+            margin: 0px 9px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 5px;
+        } */
+
+
+        nav ul li
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: black;
+            border-radius: 30px;
+            padding: 13px 18px;
+            transition: ease-in-out .2s;
+        }
+
+        /* nav ul li:hover
+        {
+            background-color: white;
+            margin: 0px 9px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 5px;
+            background-color: black;
+            cursor: pointer;
+        } */
+
+        nav ul li:hover
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 30px;
+            padding: 13px 18px;
+            cursor:pointer;
+            background-color: rgba(0, 0, 0, 0.511);
+        }
+
+
+        nav ul li:active
+        {
+            cursor: pointer;
+            background-color: black;
+        }
+
+
+
+
+        /* HEADER: SIGN UP /LOGIN */
+
+        #register
+        {
+            position: relative;
+            right:-300px;
+            display: flex;
+            color: black;
+            width: 360px;
+        }
+
+
+        #loginBut
+        {
+            background-color: aquamarine;
+            width: 145px;
+            padding: 7px 50px;
+            /* margin: 0px 10px; */
+            border-radius: 200px;
+            height: 30px;
+            margin: 19px 30px 0px 0px;
+            box-sizing: border-box;
+            transition: ease-in-out .2s;
+        }
+
+        #loginBut:hover
+        {
+            background-color:rgba(137, 43, 226, 0.66);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        #loginBut:active
+        {
+            background-color: rgba(137, 43, 226, 0.267);
+        }
+        
+
+        #SignUpBut
+        {
+            background-color: aliceblue;
+            width: 130px;
+            padding: 7px 35px;
+            /* margin: 0px 10px; */
+            border-radius: 30px;
+            height: 30px;
+            margin: 19px 67px 0px 0px;
+            box-sizing: border-box;
+            transition: ease-in-out .2s;
+        }
+
+
+        #SignUpBut:hover
+        {
+            background-color: rgba(137, 43, 226, 0.66);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+
+        #SignUpBut:active
+        {
+            background-color: rgba(137, 43, 226, 0.308);
+        }
+
+
+
+
+        /* INTRO */
+
+
+        .intro
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .intro h1
+        {
+            color: black;
+            text-align: center;
+        }
+
+
+
+        .intro p
+        {
+            height: 200px;
+            width: 372px;
+            margin: 0px 0px;
+            text-align: center;
+            font-size:large;
+        }
+        
+
+
+
+        /* BLOCK 2 */
+
+        .block2
+        {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 400px;
+            background-color: aliceblue;
+        }
+
+        .block2 .item
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 360px;
+            height: 250px;
+            background-color: rgba(83, 162, 141, 0.418);
+            /* border: 2px solid black; */
+            /* border-radius: 5px; */
+            margin: 30px 10px 10px 10px;
+            box-shadow: 5px 10px 10px #0000006d;
+            transition: ease-in-out .2s;
+        }
+
+
+        .block2 .item:hover
+        {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .block2 .outerBox h3
+        {
+            text-align: center;
+            font-size: x-large;
+            color: rgb(0, 0, 0);
+        }
+
+        .block2 .item p
+        {
+            width: 217px;
+            height: 103px;
+        }
+
+        /* TOYS SECTION */
+        #toys
+        {
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #toys img
+        {
+            display: block;
+            margin: 0px auto;
+            width: 250px;
+            height: 230px;
+        }
+
+
+        /* CLOTHES SECTION */
+
+
+        #clothes
+        {
+            background-image: url('');
+        }
+
+        #clothes img
+        {
+            display: block;
+            margin: 0px auto;
+            width: 250px;
+            height: 260px;
+        }
+
+
+        /* ELECTRONICS SECTION */
+        #electronics
+        {
+            background-image: url('');
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #electronics img
+        {
+            display: block;
+            margin: 0px auto;
+            width: 216px;
+            height: 234px;
+        }
+
+
+
+        /* BLOCK 3 */
+
+
+        .block3
+        {
+            width: 100%;
+            height: 400px;
+            /* background-color: rgba(74, 215, 34, 0.863); */
+            background-color: #000000d4;
+            display: flex;
+            justify-content: end;
+        }
+
+        .block3 iframe
+        {
+            width: 500px;
+            height: 300px;
+            border: 2px solid rgba(0, 204, 255, 0.475);
+            box-shadow: 10px 5px rgba(0, 238, 255, 0.495);
+            margin: 44px 59px;
+            padding: 0px 0px;
+        }
+
+
+        .block3 h1
+        {
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+
+        .block3 .contentBlock3
+        {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 600px;
+        }
+
+
+
+        .block3 .contentBlock3 h1
+        {
+            font-size:45px;
+            color: rgb(15, 141, 191);
+            text-shadow: 2px 4px 0px rgba(46,91,173,0.6);
+        }
+
+        .block3 .contentBlock3 p
+        {
+            text-align: center;
+        }
+
+
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://img.icons8.com/nolan/512/fast-cart.png">
+        </div>
+        <nav>
+            <ul>
+                <a href="home.html" style="text-decoration: none; color: black"><li>Home</li></a>
+                <a href="aboutus.html" style="text-decoration: none; color: black"><li>About Us</li></a>
+                <a href="OurTeamPage.html" style="text-decoration: none; color: black"><li>Our Team</li></a>
+                            <a href="contactUs2.html" style="text-decoration: none; color: black">  <li>Contact Us</li></a>
+            </ul>
+        </nav>
+        <div id="register">
+                <a href="login.html" style="text-decoration: none; color: black"><div id="loginBut">Login</div></a>
+                <a href="signup.html" style="text-decoration: none; color: black"><div id="SignUpBut">Sign Up</div></a>
+        </div>
+    </div>
+
+    <div class="intro">
+        <h1 style="color: black;">Clothes Section&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <p>Get Everything from Mens, Kids&nbsp;to Women's Clothes at the Best Price! </p>
+    </div>
+
+
+    <div class="block2">
+        <a href="./clothes/kid1.html">
+
+            <div class="outerBox">
+                
+                <div class="item" id="electronics">
+                    <!-- <h3>Electronics</h3> -->
+                    <img id = "kidImg" src="https://s7ap1.scene7.com/is/image/bigw/Girls%20Clothing%201-7%20CT-1?$cms-max-image-threshold$&fmt=png-alpha&wid=352&fit=hfit%2C1">
+                </div>
+                <h3>Kids</h3>
+            </div>
+        </a>
+
+        <a href="./clothes/mens1.html">
+
+            <div class="outerBox">
+                
+                <div class="item" id="toys">
+                    <img id="menImg" src="https://www.openpay.com.au/wp-content/uploads/2022/11/mn.png">
+                </div>
+                <h3>Mens</h3>
+            </div>
+        </a>
+        
+        <a href="./clothes/women1.html">
+
+            <div class="outerBox">
+                
+                <div class="item" id="clothes">
+                    <img id="womenImg" src="https://www.pikmax.com/images/thumbs/0003877_womens_390.png">
+                </div>
+                
+                <h3>Women</h3>
+            </div>
+        </a>
+
+        
+    </div>
+
+
+    <div class="block3">
+        <div class="contentBlock3">
+            <h1>Get Everything At One Stop!
+            </h1>
+            <h2>Easy and Comfortable Shopping At The Best Price.</h2>
+            <p>&nbsp; Here at fastCart.com we aim to provide our customers the best service in delivery of goods of a variety of items. Our mission is to lead the world in getting quality and affordable products.</p>
+        </div>
+        <!-- <iframe src="https://www.youtube.com/embed/jAugNwmzoTI?controls=1"> -->
+        <iframe src="https://www.youtube.com/embed/NrmMk1Myrxc?controls=1">
+
+        </iframe>
+    </div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+ /* DECLARING BODY AS A GRID ITEM */
+ body
+ {
+     display: grid;
+     /* background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZWxlY3Ryb25pY3xlbnwwfHwwfHw%3D&w=1000&q=80'); */
+     background-image: url('https://media.istockphoto.com/id/594484448/vector/books-sketch-seamless.jpg?s=612x612&w=0&k=20&c=DACpDBVkXYVwafxvixLdFERAbVJMF94SyZO9gJ0FcU4=');
+     grid-template-rows: 70px 500px;
+     row-gap: 10px;
+     margin: 0px;
+ }
+
+
+ .navbar
+ {
+     /* background-color: aqua; */
+     display: grid;
+     grid-template-columns: 300px auto 300px;
+ }
+
+
+ .navbar .navBtnContainer
+ {
+     display: flex;
+     width: 200px;
+     height: 100%;
+     justify-content: center;
+     align-items: center;
+ }
+
+
+ .navbar #nextContainer
+ {
+     grid-column-start: 3;
+     grid-column-end: 4;
+     width: 390px;
+ }
+
+ .navbar .btn
+ {
+     /* padding: 10px; */
+     margin: 10px 10px 10px 10px;
+     width: 100px;
+     height: 30px;
+     border-radius: 50px;
+     color: white;
+     box-shadow: 0px 0px 5px white;
+     background-color: rgb(137, 43, 226);
+ }   
+
+
+ .navbar .btn:hover
+ {
+     background-color: green;
+     box-shadow: 0px 0px 20px rgb(137, 209, 233);
+     transform: scale(1.08);
+     cursor: pointer;
+ }
+
+ /* DECLARING PRODUCT BOX AS A GRID ITEM */
+ .productBox
+ {
+     display: grid;
+     grid-template-columns: 0.5fr 5fr 0.5fr;
+     /* background-color: rgb(181, 32, 156); */
+     justify-content: center;
+ }
+
+ .contentBox
+ {
+     grid-column-start: 2;
+     grid-column-end: 3;
+     background-color: lightcyan;
+
+
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+     grid-template-rows: 3fr 1fr;
+     column-gap: 20px;
+     row-gap: 20px;
+     padding: 20px;
+ }
+
+
+ /* INSIDE CONTENT BOX */
+
+ .contentBoxItem
+ {
+     background-color: white
+ }
+
+ #imageBox
+ {
+     display: flex;
+     background-color: white;
+     border: 2px solid black;
+     justify-content: center;
+     align-items: center;
+     /* background-color: blue; */
+     border: 2px solid rgb(0, 179, 255);
+     box-shadow: 0px 0px 15px rgb(56, 154, 219);
+ }
+
+ #imageBox img
+ {
+     width: 200px;
+     height: 300px;
+ }
+ #imageBox img:hover
+ {
+     transform: scale(1.08);
+     cursor: pointer;
+ }
+ 
+ #buyBox
+ {
+     grid-column-start: 1;
+     grid-column-end: 3;
+ }
+
+
+ /* INSIDE DESCRIPTION BOX */
+
+ #descriptionBox
+ {
+     /* background-color: rgb(0, 0, 0); */
+     border: 2px solid orange;
+     box-shadow: 0px 0px 30px orange;
+ }
+
+ #descriptionBox h2
+ {
+     font-size: 20px;
+     text-align: left;
+     margin: 10px;
+     color: rgb(255, 85, 0);
+ }
+
+ #descriptionBox h4
+ {
+     margin: 10px;
+     color: green;
+     font-size: 17px;
+ }
+
+ #descriptionBox ul
+ {
+     padding: 0px 0px 0px 30px;
+     /* background-color: rgba(255, 127, 234, 0.557); */
+ }
+
+#descriptionBox ul li
+ {
+     margin: 10px;
+     font-size: 14px;
+     color: rgb(62, 62, 62);
+     /* color: white; */
+     background-color:rgba(36, 152, 184, 0.146);
+     list-style-type: square;
+ }
+ #descriptionBox ul
+ {
+     margin: 10px;
+     font-size: 14px;
+     color: rgb(62, 62, 62);
+     /* color: white; */
+     background-color:rgba(36, 152, 184, 0.146);
+     list-style-type: square;
+ }
+
+
+ /* INSIDE BUY BOX */
+
+
+ #buyBox
+ {
+     display: flex;
+     flex-direction: row-reverse;
+ }
+
+ .addInfoBox
+ {
+     background-color: rgba(128, 128, 128, 0.409);
+     display: grid;
+     grid-template-columns: 2.5fr 1.5fr 1.77fr;
+     width: 772.8px;
+ }
+
+
+ .addInfoBox .noteBox 
+ {
+     color: #0F1111;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     grid-column-start: 1;
+     grid-column-end: 3;
+
+ }
+ .addInfoBox .noteBox p
+ {
+     display: block;
+     color: #0F1111;
+     padding: 0px 0px 0px 45px;
+     margin: 5px 0px 5px 0px;
+     font-size: 14px;
+ }
+
+ .addInfoBox .noteBox h4
+ {
+     margin: 0px;
+     text-align: left;
+     width: 500px;
+     margin: 10px 0px 0px 0px;
+     padding: 5px;
+ }
+
+
+
+ .addInfoBox #priceBox
+ {
+     display: flex;
+     color: #565959;
+     align-items: center;
+     justify-content: center;
+     grid-column-start: 3;
+     grid-column-end: 4;
+ }
+
+
+ .addInfoBox #priceBox table
+ {
+     border-spacing: 20px 7px;
+     /* border: 2px solid black; */
+ }
+ .addInfoBox #priceBox table th
+ {
+     width: 80px;
+     /* border: 2px solid black; */
+ }
+ .addInfoBox #priceBox table td
+ {
+     width: 116px;
+     /* border: 2px solid black; */
+ }
+
+
+
+
+ 
+ .buttonBox
+ {
+     display: flex;
+     flex-direction: column;
+     width: 200px;
+     height: 100%;
+     justify-content: center;
+     align-items: center;
+     background-color: grey;
+ }
+
+ .buttonBox .btn 
+ {
+     width: 100px;
+     height: 30px;
+     margin: 10px;
+     border-radius: 5px;
+ }
+
+ .buttonBox #buyNowBtn
+ {
+     background-color: green;
+     color: white;
+ }
+ .buttonBox #buyNowBtn:hover
+ {
+     background-color: rgb(137, 219, 16);
+     transform: scale(1.08);
+     box-shadow: 0px 0px 20px lightblue;
+     cursor: pointer;
+ }
+
+
+ .buttonBox #addToCartBtn
+ {
+     background-color: rgba(0, 191, 255, 0.858);
+     color: white;
+ }
+ .buttonBox #addToCartBtn:hover
+ {
+     background-color: rgb(127, 223, 255);
+     color: white;
+     transform: scale(1.08);
+     box-shadow: 0px 0px 20px lightblue;
+     cursor: pointer;
+ }
+
+

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&family=Dancing+Script:wght@700&family=Proza+Libre&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+
+
+        *
+        {
+            font-family: 'Ubuntu';
+        }
+
+
+        body
+        {
+            margin: 0px;
+            display: grid;
+            grid-template-columns: 0.3fr 3fr auto;
+            grid-template-rows: 0.6fr 4fr 0.5fr;
+            row-gap: 10px;
+            height: 500px;
+            /* background: url('https://img.freepik.com/premium-vector/seamless-shopping-cart-pattern-white-background-simple-shopping-cart-icon-creative-design-can-be-used-wallpaper-web-page-background-textile-print-ui-ux_159242-3135.jpg?w=2000'); */
+            /* background: url('https://img.freepik.com/free-vector/hand-drawn-shopping-pattern-design_23-2149633578.jpg'); */
+            background: url('https://img.freepik.com/premium-vector/vector-seamless-shopping-pattern-background_574806-2485.jpg');
+        }
+
+
+        #whiteBackgroundBox
+        {
+            background-color: white;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        /* LOGO BUTTON */
+        #logo
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: beige; */
+        }
+
+
+        #logo:hover
+        {
+            cursor: pointer;
+        }
+
+        #logo img
+        {
+            width:80px;
+            height:80px;
+        }
+
+
+
+        /* ITEM DISPLAY BOX */
+
+
+        #itemDisplayBox
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid violet;
+            grid-column-start:2;
+            grid-column-end:3;
+            /* background-color: rgb(144, 238, 208);*/
+            background-color: white;
+            /* background-image: url('https://png.pngtree.com/png-clipart/20190117/ourmid/pngtree-hand-painted-trolley-empty-cart-daily-supplies-png-image_441612.jpg'); */
+        }
+
+
+        .itemBox
+        {
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+            width: 1000px;
+            height: 130px;
+            margin:10px;
+            padding: 5px;
+            background-color: rgba(144, 217, 248, 0.801);
+        }
+
+
+        .itemBox .prdImg
+        {
+            width: 100px;
+            height: 100px;
+        }
+
+        .imageContainer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border: 2px solid violet;
+        }
+
+
+        .productTitle
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: lightseagreen; */
+        }
+
+
+        .productTitle h3
+        {
+            /* color: rgb(255, 85, 0); */
+            text-align: center;
+            /* background-color: green; */
+            padding: 10px;
+            background-color: rgb(248, 163, 36);
+        }
+
+
+        .quantityAndPriceBox
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightyellow;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+
+        .QtyBox 
+        {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 3px;
+            column-gap: 3px;
+            margin: 0px 0px 5px 0px;
+        }
+
+
+        .QtyHeading
+        {
+            text-align: center;
+            /* background-color: green; */
+            color: brown;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            font-weight: bold;
+        }
+
+
+
+        .arrowContainer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upArrow
+        {
+            width: 10px;
+            height: 13px;
+            transform: scaleX(-1);
+        }
+
+
+        .qtyBox
+        {
+            text-align: center;
+        }
+        .downArrow
+        {
+            width: 10px;
+            height: 13px;
+        }
+
+
+
+
+        .priceHeading
+        {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+
+        .priceOfTheItem
+        {
+            color: #9e569e;
+        }
+
+
+
+
+
+        /* Clear All Button */
+        #clearAllBtn
+        {
+            width: 100px;
+            height: 30px;
+            background-color: green;
+            color:white;
+        }
+
+
+
+        #clearAllBtn:hover
+        {
+            box-shadow: 0px 0px 5px lightgreen;
+        }
+
+        #clearAllBtn:active
+        {
+            background-color: lightgreen;
+        }
+
+        #clearAll
+        {
+            grid-column-start:3;
+            grid-column-end:4;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: beige; */
+        }
+
+        /* TOTAL PRICE BOX */
+        #priceBox
+        {
+            border: 2px solid lightblue;
+            background-color: white;
+            grid-column-start:2;
+            grid-column-end:3;
+            grid-row-start:3;
+            grid-row-end: 4;
+
+
+            display: grid;
+            /* grid-template-columns: 5.2fr 0.8fr; */
+            grid-template-columns: auto 170px 140px 160px;
+        }
+
+
+
+        #thankYouContainer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color:#5fb2c1; */
+            background-image: url('https://i.pinimg.com/originals/97/4f/ea/974feac932a93d6bec76493d096641e1.jpg');
+        }
+
+
+
+        #thankYouContainer h1
+        {
+            text-align:center;
+            font-size: 30px;
+            margin: 0px;
+            font-family: 'Dancing Script';
+            /* color:#9864f1; */
+            color:#583a8a;
+        }
+
+        #totalPriceBox
+        {
+            grid-column-start:4;
+            grid-column-end: 5;
+            /* background-color: antiquewhite; */
+            background-color: rgb(255, 219, 88);
+
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: rgb(0, 125, 0);
+            font-weight: bold;
+        }
+
+
+        #textOfTotalPrice
+        {
+            grid-column-start:3;
+            grid-column-end:4;
+            /* background-color: rgb(107, 210, 210); */
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        #buyNowBtnContainer
+        {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        #buyNowBtn
+        {
+            background-color: rgb(52, 151, 203);
+            color: white;
+            height: 25px;
+        }
+
+
+        #buyNowBtn:hover
+        {
+            box-shadow: 0px 0px 5px cyan;
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">
+        <a href="./home.html">
+            <img src="https://img.icons8.com/nolan/512/fast-cart.png" alt="LOGO">
+        </a>
+    </div>
+
+
+    <div id="clearAll">
+        <button id="clearAllBtn">Clear All</button>
+    </div>
+
+
+    <div id="itemDisplayBox">
+
+
+        <div class="itemBox">
+            <div class="imageContainer">
+                <img class="prdImg" src="https://cdn.arstechnica.net/wp-content/uploads/2022/01/LenovoLaptop-CROPPED.png" alt="Product Image">
+            </div>
+
+
+            <div class="productTitle">
+                <h3>Lenovo 15.6" IdeaPad 1 Laptop, AMD Dual-core Processor, 15.6" HD Anti-Glare Display</h3>
+            </div>
+
+            <div class="quantityAndPriceBox">
+                <div class="QtyBox">
+                    <div class="QtyHeading">
+                        Quantity
+                    </div>
+                    <div class="arrowContainer" onclick="eventMy(event)">
+                        <img class="upArrow" src="https://cdn-icons-png.flaticon.com/512/892/892647.png">
+                        <p style="display:none;">Lenovo 15.6" IdeaPad 1 Laptop, AMD Dual-core Processor, 15.6" HD Anti-Glare Display</p>
+                        <p style="display:none">1</p>
+                    </div>
+                    <div class="qtyBox">
+
+                    </div>
+                    <div class="arrowContainer">
+                        <img class="downArrow" src="https://cdn-icons-png.flaticon.com/512/892/892647.png">
+                    </div>
+                </div>
+
+                <div class="itemPriceBox">
+                    <div class="priceHeading">
+                        Price
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div id="priceBox">
+        <div id="thankYouContainer">
+            <!-- <img src="https://www.tidio.com/wp-content/uploads/thank-you-cover.png"> -->
+            <!-- <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/thank-you-for-shopping-tag-design-template-8b64526a2203a626c83372ddfe69931d_screen.jpg?ts=1566569437"> -->
+            <h1>Thank You For Shopping With Us!</h1>
+        </div>
+        <div id="buyNowBtnContainer">
+
+            <a href="./buynow.html">
+                <button id="buyNowBtn">
+                    Proceed To Checkout
+                </button>
+            </a>
+
+
+
+        </div>
+        <div id="textOfTotalPrice">
+            <span style="font-size: 20px; color: green; font-family:Arial, Helvetica, sans-serif; text-align:center;">Total Price: </span>
+        </div>
+        <div id="totalPriceBox">
+            <span></span>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <script>
+        
+        
+        
+        function displayEmptyBackground()
+        {
+            console.log('THE FUNCTION HAS BEEN ENTERED.')
+            let y = document.querySelector('#itemDisplayBox')
+            console.log(y);
+            console.log(y.innerHTML);
+            if(y.innerHTML=='')
+            {
+                y.style.backgroundColor = "blue";
+            }
+        }
+        
+        function createItem(y)
+        {
+            
+            let obj = JSON.parse(y);
+            let z = `        <div class="itemBox">
+                <div class="imageContainer">
+                    <img class="prdImg" src="${obj.source}" alt="Product Image">
+                    </div>
+                    
+                    
+                    <div class="productTitle">
+                        <h3>${obj.title}</h3>
+                        </div>
+                        
+                        <div class="quantityAndPriceBox">
+                            <div class="QtyBox">
+                                <div class="QtyHeading">
+                                    Quantity
+                                    </div>
+                                    <div class="arrowContainer" onclick="eventMy(event)">
+                        <img class="downArrow" src="https://cdn-icons-png.flaticon.com/512/892/892647.png">
+                        <p style="display:none;">${obj.title}</p>
+                        <p style="display:none">1</p>
+                        </div>
+                        <div class="qtyBox">
+                            ${obj.number}
+                            </div>
+                            <div class="arrowContainer" onclick="eventMy(event)">
+                                <img class="upArrow" src="https://cdn-icons-png.flaticon.com/512/892/892647.png">
+                                <p style="display:none;">${obj.title}</p>
+                                <p style="display:none">1</p>
+                                </div>
+                                </div>
+                                
+                                <div class="itemPriceBox">
+                    <div class="priceHeading">
+                        Price
+                        </div>
+                        <div class="priceOfTheItem">
+                            ${obj.itemPrice}
+                            </div>
+                            </div>
+                            </div>
+        </div>` ;
+        document.querySelector('#itemDisplayBox').insertAdjacentHTML('afterbegin',z);
+    }
+    
+    
+    
+        function addToCart()
+        {
+            document.querySelector('#itemDisplayBox').innerHTML = '';
+            items = Object.keys(localStorage);
+            items.forEach( (item) => {
+                createItem(localStorage.getItem(item));
+            });
+        }
+        
+        
+        function getPrice(y)
+        {
+            let i;
+            let c;
+            let numString = '';
+            for(i=0;i<y.length;i++)
+            {
+                c = y.charAt(i);
+                if(!isNaN(c)) //If c is a number
+                {
+                    numString += c;
+                }
+            }
+            return eval(numString);
+        }
+        
+        function calcTotalPrice()
+        {
+            let x=0;
+            let sum=0;
+            items = Object.keys(localStorage);
+            console.log("ITEMS",items);
+            items.forEach((item)=>{
+                let itemObj = JSON.parse(localStorage.getItem(item));
+                console.log('ITEM OBJ',itemObj);
+                console.log("ITEM PRICE",itemObj.itemPrice);
+                console.log('ITEM PRICE IN INTEGER',getPrice(itemObj.itemPrice));
+                sum += getPrice(itemObj.itemPrice)*itemObj.number;
+            });
+            console.log('TOTAL SUM IS',sum);
+            return sum;
+        }
+
+
+        function convertPriceToDisplayFormat(x)
+        {
+            x = x.toString();
+            let priceStr = '';
+            let i;
+            let count=0;
+            for(i=x.length-1;i>=0;i--)
+            {
+                priceStr = x.charAt(i) + priceStr;
+                if(count!=0 && count%2==0 && count!=x.length-1)
+                {
+                    priceStr = ',' + priceStr;
+                }
+                count++;
+            }
+            
+            
+            priceStr = 'Rs. ' + priceStr;
+            
+            
+            
+            
+            
+            
+            return priceStr;
+            
+            
+        }
+        
+        function setTotalPrice()
+        {
+            x = calcTotalPrice();
+            // console.log('X=',x);
+            // alert('Total Price is'+x);
+            let y = document.querySelector('#totalPriceBox span')
+            y.innerHTML = convertPriceToDisplayFormat(x);
+        }
+
+
+        
+        
+        addToCart()
+        setTotalPrice()
+        
+        function clearAllItems()
+        {
+            localStorage.clear();
+            document.querySelector('#itemDisplayBox').innerHTML = '';
+            setTotalPrice();
+        }
+        
+        window.addEventListener('storage', function run()
+        {
+            console.log("THIS FUNCTION HAS BEEN ENTERED");
+            addToCart();
+            setTotalPrice();
+        });
+        
+        
+        document.querySelector('#clearAllBtn').addEventListener('click', clearAllItems);
+        
+        function eventMy(event)
+        {
+            let element = event.target;
+            y= element.nextElementSibling.innerHTML; //Target The Heading
+            console.log(y);
+            let choice = element.className;
+            console.log(choice);
+            let selectedObj = JSON.parse(localStorage.getItem(y)) //Object of this particular heading
+            if(choice=='upArrow')
+            {
+                selectedObj.number += 1;
+            }
+            else //(if choice==downArrow)
+            {
+                if(selectedObj.number!=0)
+                {
+                    selectedObj.number -= 1;
+                }
+                else
+                {
+                    alert('The Item Quantity Cannot Be Decreased Furthur.');
+                }
+            }
+            
+            
+            localStorage.setItem(y, JSON.stringify(selectedObj));
+            
+            //DONT' KNOW WHY THE BELOW HAVE TO BE WRITTEN SINCE THEY DON'T AUTOMATICALLY FIRE! WHEN THE LOCAL STORAGE IS CHANGED
+            addToCart();
+            setTotalPrice();
+        }
+        </script>
+</body>
+</html>
+
+
+
+
+
+
+

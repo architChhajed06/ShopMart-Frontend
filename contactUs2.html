@@ -1,0 +1,406 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="contactus.css">
+
+
+
+
+    <style>
+        body
+        {
+            margin:0px;
+        }
+        /* HEADER SECTION*/
+        .containerNav
+        {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            /* background-color: rgba(37, 34, 34, 0.909); */
+            font-family:'Times New Roman', Times, serif !important;
+        }
+
+
+        .containerNav::before
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /* background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Shopping_Graph_hero_2.jpg'); */
+            opacity: 1;
+            z-index: -1;
+            height: 352px;
+            width: 100%;
+        }
+
+        /* HEADER: LOGO */
+        .logo
+        {
+            color: white;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            width: 10%;
+        }        .logo:hover
+        {
+            cursor: pointer;
+        }
+
+        .logo img
+        {
+            width: 71px;
+            height: 72px;
+        }
+
+
+        /* HEADER: NAVBAR */
+
+
+        nav
+        {
+            width: 450px;
+            /* background-color: white; */
+            border-radius: 20px;
+        }
+
+        nav ul
+        {
+            list-style-type:none;
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            padding: 0px;
+            margin:0px 0px;
+        }
+
+        /* nav ul li
+        {
+            background-color: white;
+            margin: 0px 9px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 5px;
+        } */
+
+
+        nav ul li
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: black;
+            border-radius: 30px;
+            padding: 8px 18px;
+            transition: ease-in-out .2s;
+        }
+
+        /* nav ul li:hover
+        {
+            background-color: white;
+            margin: 0px 9px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 5px;
+            background-color: black;
+            cursor: pointer;
+        } */
+
+        nav ul li:hover
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 30px;
+            padding: 8px 18px;
+            cursor:pointer;
+            background-color: rgba(0, 0, 0, 0.511);
+        }
+
+
+        nav ul li:active
+        {
+            cursor: pointer;
+            background-color: black;
+        }
+
+
+
+        #contactUsBut
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 30px;
+            padding: 8px 18px;
+            cursor:pointer;
+            background-color: rgba(0, 0, 0, 0.511);
+        }
+
+
+
+
+        /* HEADER: SIGN UP /LOGIN */
+
+        #register
+        {
+            position: relative;
+            right:-300px;
+            display: flex;
+            color: black;
+            width: 360px;
+        }
+
+
+        #loginBut
+        {
+            background-color: aquamarine;
+            width: 145px;
+            padding: 7px 50px;
+            /* margin: 0px 10px; */
+            border-radius: 200px;
+            height: 30px;
+            margin: 19px 30px 0px 0px;
+            box-sizing: border-box;
+            transition: ease-in-out .2s;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loginBut:hover
+        {
+            background-color:rgba(137, 43, 226, 0.66);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        #loginBut:active
+        {
+            background-color: rgba(137, 43, 226, 0.267);
+        }
+        
+
+        #SignUpBut
+        {
+            background-color: aliceblue;
+            width: 130px;
+            padding: 7px 35px;
+            /* margin: 0px 10px; */
+            border-radius: 30px;
+            height: 30px;
+            margin: 19px 67px 0px 0px;
+            box-sizing: border-box;
+            transition: ease-in-out .2s;
+
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        #SignUpBut:hover
+        {
+            background-color: rgba(137, 43, 226, 0.66);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+
+        #SignUpBut:active
+        {
+            background-color: rgba(137, 43, 226, 0.308);
+        }
+
+
+
+
+
+
+        #contactOurTeam
+        {
+            font-size: 45px;
+            font-family:'Times New Roman', Times, serif;
+            border-top: 2px solid green;
+            border-bottom: 2px solid green;
+            color: darkcyan;
+
+
+            background-color: white;
+        }
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</head>
+
+
+
+
+
+
+
+	
+	<body>
+
+
+
+        <div class="containerNav">
+            <div class="logo">
+                <img src="https://img.icons8.com/nolan/512/fast-cart.png">
+            </div>
+            <nav>
+                <ul>
+                    <a href="home.html" style="text-decoration: none; color: black"><li>Home</li></a>
+                    <a href="aboutus.html" style="text-decoration: none; color: black"><li>About Us</li></a>
+                    <a href="OurTeamPage.html" style="text-decoration: none; color: black"><li>Our Team</li></a>
+                                <a href="contactUs2.html" style="text-decoration: none; color: black">  <li id="contactUsBut">Contact Us</li></a>
+                </ul>
+            </nav>
+            <div id="register">
+                    <a href="login.html" style="text-decoration: none; color: black"><div id="loginBut">Login</div></a>
+                    <a href="signup.html" style="text-decoration: none; color: black"><div id="SignUpBut">Sign Up</div></a>
+            </div>
+        </div>
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"></h2>
+					<h2 class="heading-section" id="contactOurTeam">Contact Our Team</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Get In Touch</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Full Name</label>
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Email Address</label>
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="subject">Subject</label>
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="#">Message</label>
+													<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Send Message" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap bg-primary w-100 p-md-5 p-4">
+									<h3>Let's get in touch</h3>
+									<p class="mb-4">We're open for any suggestion or just to have a chat</p>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Address:</span> 198 West 21th Street, New Delhi , India - 110008</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Phone:</span>  + 1235 2355 98</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Email:</span> <a href="https://gmail.com">fastcart108.com</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-globe"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Website:</span> <a href="./home.html ">fastcart.com</a></p>
+					          </div>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+

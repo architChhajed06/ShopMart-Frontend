@@ -1,0 +1,333 @@
+/* DECLARING BODY AS A GRID ITEM */
+body
+{
+    display: grid;
+    
+    background-image: url('https://img.freepik.com/free-vector/hand-drawn-shopping-pattern-design_23-2149633581.jpg');
+    grid-template-rows: 70px 500px;
+    row-gap: 10px;
+    margin: 0px;
+}
+
+
+.navbar
+{
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+}
+
+
+.navbar .navBtnContainer
+{
+    display: flex;
+    width: 200px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar #nextContainer
+{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 390px;
+}
+
+.navbar .btn
+{
+    /* padding: 10px; */
+    margin: 10px 10px 10px 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0px 0px 5px white;
+    background-color: rgb(137, 43, 226);
+}   
+
+
+.navbar .btn:hover
+{
+    background-color: green;
+    box-shadow: 0px 0px 20px rgb(137, 209, 233);
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+/* DECLARING PRODUCT BOX AS A GRID ITEM */
+.productBox
+{
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 0.5fr;
+    /* background-color: rgb(181, 32, 156); */
+    justify-content: center;
+}
+
+.contentBox
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: lightcyan;
+
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+
+/* INSIDE CONTENT BOX */
+
+.contentBoxItem
+{
+    background-color: white
+}
+
+#imageBox
+{
+    display: flex;
+    background-color: white;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    border: 2px solid rgb(0, 179, 255);
+    box-shadow: 0px 0px 15px rgb(56, 154, 219);
+}
+
+#imageBox img
+{
+    width: 250px;
+    height: 300px;
+}
+#imageBox img:hover
+{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+#buyBox
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+/* INSIDE DESCRIPTION BOX */
+
+#descriptionBox
+{
+    /* background-color: rgb(0, 0, 0); */
+    border: 2px solid orange;
+    box-shadow: 0px 0px 30px orange;
+}
+
+#descriptionBox h2
+{
+    font-size: 20px;
+    text-align: left;
+    margin: 10px;
+    color: rgb(255, 85, 0);
+}
+
+#descriptionBox h4
+{
+    margin: 10px;
+    color: green;
+    font-size: 17px;
+}
+
+#descriptionBox ul
+{
+    padding: 0px 0px 0px 30px;
+    /* background-color: rgba(255, 127, 234, 0.557); */
+}
+
+#descriptionBox ul li
+{
+    margin: 10px;
+    font-size: 14px;
+    color: rgb(62, 62, 62);
+    /* color: white; */
+    background-color:rgba(36, 152, 184, 0.146);
+    list-style-type: square;
+}
+
+
+.availaibleSizeBox
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.availaibleSizeBox .sizeBox 
+{
+    width:90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    /* background-color: rgba(0, 255, 162, 0.715); */
+    /* background-color: rgba(153, 229, 242, 0.409); */
+    margin: 12px;
+    /* color: rgb(59, 117, 165); */
+    color: black;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 208, 255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.availaibleSizeBox .sizeBox:hover
+{
+    transform: scale(1.08);
+}
+
+/* INSIDE BUY BOX */
+
+
+#buyBox
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.addInfoBox
+{
+    background-color: rgba(128, 128, 128, 0.409);
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1.77fr;
+    width: 772.8px;
+}
+
+
+.addInfoBox .noteBox 
+{
+    color: #0F1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.addInfoBox .noteBox p
+{
+    display: block;
+    color: #0F1111;
+    padding: 0px 0px 0px 15px;
+}
+
+
+.addInfoBox .noteBox img
+{
+    width: 310px;
+    height: 95px;
+}
+
+
+
+.addInfoBox #priceBox
+{
+    display: flex;
+    color: #565959;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+
+.addInfoBox #priceBox table
+{
+    border-spacing: 20px 7px;
+    /* border: 2px solid black; */
+}
+.addInfoBox #priceBox table th
+{
+    width: 80px;
+    /* border: 2px solid black; */
+}
+.addInfoBox #priceBox table td
+{
+    width: 116px;
+    /* border: 2px solid black; */
+}
+
+
+.addInfoBox .detailBox
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.addInfoBox .detailBox table
+{
+    /* border: 2px solid black; */
+    border-spacing: 5px 5px;
+    margin: 5px;
+}
+
+.addInfoBox .detailBox table th
+{
+    /* border: 2px solid black; */
+    border-spacing: 0px 0px;
+    font-size: 15px;
+}
+
+
+
+
+
+.buttonBox
+{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.buttonBox .btn 
+{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.buttonBox #buyNowBtn
+{
+    background-color: green;
+    color: white;
+}
+.buttonBox #buyNowBtn:hover
+{
+    background-color: rgb(137, 219, 16);
+    transform: scale(1.08);
+    box-shadow: 0px 0px 20px lightblue;
+    cursor: pointer;
+}
+
+.buttonBox #addToCartBtn
+{
+    background-color: rgba(0, 191, 255, 0.858);
+    color: white;
+}
+.buttonBox #addToCartBtn:hover
+{
+    background-color: rgb(127, 223, 255);
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 0px 0px 20px lightblue;
+    cursor: pointer;
+}

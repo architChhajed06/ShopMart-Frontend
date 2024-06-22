@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now Page!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&family=Dancing+Script:wght@700&family=Proza+Libre&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body
+        {
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            /* background: url('https://img.freepik.com/premium-vector/seamless-shopping-cart-pattern-white-background-simple-shopping-cart-icon-creative-design_159242-12502.jpg?w=200id */
+            background: url('https://thumbs.dreamstime.com/b/seamless-illustration-theme-online-shopping-internet-shops-dark-contour-icons-white-background-pattern-91949360.jpg');
+        }
+        
+        /* LOGO SECTION */
+        #logo img
+        {
+            /* border: 2px solid green; */
+            width: 150px;
+            height: 150px;
+        }
+
+        #borderBox
+        {
+            width:184px;
+            height:184px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid blue;
+            /* border: 2px solid rgb(140, 28, 225); */
+            border-radius:117px;
+            background-color: white;
+        }
+
+        #logo
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* FORM SECTION */
+
+
+        #formBox
+        {
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #formBox form
+        {
+            border: 2px solid violet;
+            width: 350px;
+            height: 750px;
+            /* background-color: rgb(130, 224, 231); */
+            background-color: rgb(197, 242, 245)
+        }
+
+        #formBox form .inputBox
+        {
+            /* border: 2px solid orange; */
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        #formBox form .inputBox input
+        {
+            height: 25px;
+            width: 290px;
+            /* border-radius: 10px; */
+        }
+
+        #formBox form h1
+        {
+            text-align:center;
+            /* font-family: 'Times New Roman', Times, serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Arial,sans-serif;
+            font-family: 'Proza Libre', sans-serif; */
+            /* font-family: 'Myriad'; */
+            font-family: 'Times New Roman', Times, serif;
+            /* background-color: greenyellow; */
+            background-color: green;
+            color: yellow;
+            text-shadow: 0px 0px 0px white;
+        }
+
+
+        #formBox form .inputBox label
+        {
+            display: none;
+        }
+
+
+        .inputBox textarea
+        {
+            width: 290px;
+            height: 70px;
+        }
+
+
+        #selectBox
+        {
+            width: 290px;
+            margin: 20px 0px 10px 30px;
+            display: flex;
+            flex-direction: column;
+            background-color: orange;
+            box-sizing: border-box;
+            padding: 7px;
+            box-shadow: 5px 7px 5px white;
+        }
+
+
+        #selectBox h4
+        {
+            margin: 0px;
+        }
+
+        #selectBox input
+        {
+            height:30px;
+        }
+
+        .selectContainer
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .headingContainer
+        {
+            width: 220px;
+        }
+
+
+        .selectContainer img
+        {
+            width: 30px;
+            height: 30px;
+        }
+
+        .submitBox
+        {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 50px;
+        }
+
+
+        .NBOptions
+        {
+            display: none;
+        }
+
+
+
+        .NBOptions ul
+        {
+            margin: 0px;
+            transform: scale(0.9);
+        }
+
+
+        .NBOptions li
+        {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+
+        .NBOptions li label
+        {
+            width: 80px;
+        }
+
+
+        .NBOptions li img
+        {
+            width: 20px;
+            height: 20px;
+        }
+
+
+        .btn
+        {
+            height: 30px;
+            width:100px;
+            background-color: green;
+            color: white;
+            /* border: 2px solid white; */
+            border-radius: 30px;
+            border: 0px;
+        }
+
+
+        .btn:hover
+        {
+            /* border: 2px solid lightblue; */
+            box-shadow: 0px 0px 10px white;
+            transform: scale(1.1);
+        }
+
+
+        .btn:active
+        {
+            background-color: rgb(153, 218, 54);
+        }
+
+
+
+        .CardOptions
+        {
+            display: none;
+        }
+
+
+
+        .CardOptions ul
+        {
+            margin: 0px;
+            transform: scale(0.9);
+        }
+
+
+        .CardOptions li
+        {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+
+        .CardOptions li label
+        {
+            width: 80px;
+        }
+
+
+        .CardOptions li img
+        {
+            width: 20px;
+            height: 20px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id = "logo">
+        <div id="borderBox">
+            
+            <img src="https://img.icons8.com/nolan/512/fast-cart.png">
+        </div>
+    </div>
+    <div id="formBox">
+
+        <form>
+            <h1>Buy Now!</h1>
+            <div class="inputBox">
+
+                <label for="FirstNameEntry">First Name:</label>
+                <input id="FirstNameEntry" type="text" placeholder="First Name" required>
+            </div>
+
+            <div class="inputBox">
+
+                <label for="LastNameEntry">Last Name:</label>
+                <input id="LastNameEntry" type="text" placeholder="Last Name" required>
+            </div>
+
+            <div class="inputBox">
+
+                <label for="MobileEntry">Mobile Number:</label>
+                <input id="MobileEntry" type="number" placeholder="Mobile Number" required>
+            </div>
+
+
+
+            <div class="inputBox">
+
+                <label for="EmailEntry">Email Address:</label>
+                <input id="EmailEntry" type="email" placeholder="Email Address" required>
+            </div>
+
+
+            <div class="inputBox">
+
+                <label for="StateEntry">City/District:</label>
+                <input id="StateEntry" type="text" placeholder="State/Union Territory" required>
+            </div>
+            <div class="inputBox">
+
+                <label for="CityEntry">City/District:</label>
+                <input id="CityEntry" type="text" placeholder="City/District" required>
+            </div>
+
+
+
+            <div class="inputBox">
+
+                <label for="PinCodeEntry">Pin-Code:</label>
+                <input id="PinCodeEntry" type="text" placeholder="Pincode" required>
+            </div>
+
+
+            <div class="inputBox">
+
+                <label for="AddressEntry">Address:</label>
+                <textarea id="AddressEntry" placeholder="Delivery Address" width="100px" required></textarea>
+            </div>
+
+
+            <div id="selectBox">
+                <h4>Method Of Payment:</h4>
+                <div class="selectContainer">
+                    <input type="radio" id="CoD" name="MoP">
+                    <div class="headingContainer">
+                        <label for="CoD">Cash On Delivery</label>
+                    </div>
+                    <!-- <img src="https://cdn.iconscout.com/icon/free/png-256/free-cash-on-delivery-1851572-1569297.png?f=webp&w=256"> -->
+                    <!-- <img src="https://cdn-icons-png.flaticon.com/512/5278/5278605.png"> -->
+                    <img src="https://cdn-icons-png.flaticon.com/512/2489/2489756.png">
+                </div>
+                <div class="selectContainer">
+                    <input type="radio" id="CreditCard" name="MoP">
+                    <div class="headingContainer">
+                        <label for="CreditCard">Credit Card</label>
+                    </div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6963/6963703.png">
+                </div>
+
+
+                <div class="CardOptions">
+                    <ul>
+                        <li>
+                            <input type="radio" name="CardOpt" id="HDFC">
+                            <label for="paytm">HDFC</label>
+                            <img src="https://w7.pngwing.com/pngs/636/81/png-transparent-hdfc-thumbnail-bank-logos.png">
+                        </li>
+                        <li>
+                            <input type="radio" name="CardOpt" id="ICICI">
+                            <label for="phonePay">ICICI</label>
+                            <img src="https://companieslogo.com/img/orig/IBN-af38b5c0.png?t=1648383607">
+                        </li>
+                        <li>
+                            <input type="radio" name="CardOpt" id="SBI">
+                            <label for="googlePay">SBI</label>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SBI-logo.svg/2048px-SBI-logo.svg.png">
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <div class="selectContainer">
+                    <input type="radio" id="NetBanking" name="MoP">
+                    <div class="headingContainer">
+                        <label for="NetBanking">Net Banking</label>
+                    </div>
+                    <img src="https://cdn1.iconfinder.com/data/icons/fintech-color-line-vol-2-1/256/INTERNET_BANKING-512.png">
+                </div>
+
+
+                <div class="NBOptions">
+                    <ul>
+                        <li>
+                            <input type="radio" name="NBOpt" id="paytm">
+                            <label for="paytm">Paytm</label>
+                            <img src="https://icon-icons.com/icons2/730/PNG/512/paytm_icon-icons.com_62778.png">
+                        </li>
+                        <li>
+                            <input type="radio" name="NBOpt" id="phonePay">
+                            <label for="phonePay">PhonePe</label>
+                            <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/phonepe-logo-icon.png">
+                        </li>
+                        <li>
+                            <input type="radio" name="NBOpt" id="googlePay">
+                            <label for="googlePay">Google Pay</label>
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-pay-2038779-1721670.png?f=webp&w=256">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="submitBox">
+
+                <input class="btn" type="submit" value="Order Now">
+                <input class="btn" type="reset" value="Reset">
+            </div>
+            
+            
+        </form>
+    </div>
+
+
+    <script>
+        let x= document.querySelectorAll('.selectContainer');
+        console.log(x);
+        let z = document.querySelector('.NBOptions');
+        console.log(z);
+
+
+        function showNBOptions()
+        {
+            let y=x[2].querySelector('input');
+            let z = document.querySelector('.NBOptions');
+            if(y.checked)
+            {
+                z.style.display = 'block';
+            }
+            else
+            {
+                z.style.display = 'none';
+            }
+        }
+        x[0].addEventListener('click',showNBOptions);
+        x[1].addEventListener('click',showNBOptions);
+        x[2].addEventListener('click',showNBOptions);
+
+        x[0].addEventListener('click',showCardOptions);
+        x[1].addEventListener('click',showCardOptions);
+        x[2].addEventListener('click',showCardOptions);
+
+        function showCardOptions()
+        {
+            let y=x[1].querySelector('input');
+            let z=document.querySelector('.CardOptions');
+            if(y.checked)
+            {
+                z.style.display = 'block';
+            }
+            else
+            {
+                z.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

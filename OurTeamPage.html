@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+
+
+        body
+        {
+            margin: 0px;
+            overflow-x: hidden;
+        }
+            /* HEADER SECTION*/
+        .container
+        {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            /* background-color: rgba(37, 34, 34, 0.909); */
+        }
+
+
+        .container::before
+        {
+            content: '';
+            position: absolute;
+            top: -29px;
+            left: 0px;
+            background-image: url('');
+            opacity: 1;
+            z-index: -1;
+            height: 500px;
+            width: 100%;
+            /* background-image: url('https://img.freepik.com/free-photo/successful-happy-business-team_53876-15146.jpg?w=2000'); */
+            background-image: url('https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFwcHklMjB0ZWFtfGVufDB8fDB8fHww&w=1000&q=80');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* HEADER: LOGO */
+        .logo
+        {
+            color: white;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            width: 10%;
+        }        .logo:hover
+        {
+            cursor: pointer;
+        }
+
+        .logo img
+        {
+            width: 71px;
+            height: 72px;
+        }
+
+
+        /* HEADER: NAVBAR */
+
+
+        nav
+        {
+            width: 450px;
+            /* background-color: white; */
+            border-radius: 20px;
+        }
+
+        nav ul
+        {
+            list-style-type:none;
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            padding: 0px;
+            margin:0px 0px;
+        }
+
+        /* nav ul li
+        {
+            background-color: white;
+            margin: 0px 9px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 5px;
+        } */
+
+
+        nav ul li
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: black;
+            border-radius: 30px;
+            padding: 13px 18px;
+            transition: ease-in-out .2s;
+        }
+
+        /* nav ul li:hover
+        {
+            background-color: white;
+            margin: 0px 9px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 5px;
+            background-color: black;
+            cursor: pointer;
+        } */
+
+        nav ul li:hover
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 30px;
+            padding: 13px 18px;
+            cursor:pointer;
+            background-color: rgba(0, 0, 0, 0.511);
+        }
+
+
+        nav ul li:active
+        {
+            cursor: pointer;
+            background-color: black;
+        }
+
+
+
+
+        /* HEADER: SIGN UP /LOGIN */
+
+        #register
+        {
+            position: relative;
+            right:-300px;
+            display: flex;
+            color: black;
+            width: 360px;
+        }
+
+
+        #loginBut
+        {
+            background-color: aquamarine;
+            width: 145px;
+            padding: 7px 50px;
+            /* margin: 0px 10px; */
+            border-radius: 200px;
+            height: 30px;
+            margin: 19px 30px 0px 0px;
+            box-sizing: border-box;
+            transition: ease-in-out .2s;
+        }
+
+        #loginBut:hover
+        {
+            background-color:rgba(137, 43, 226, 0.66);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        #loginBut:active
+        {
+            background-color: rgba(137, 43, 226, 0.267);
+        }
+        
+
+        #SignUpBut
+        {
+            background-color: aliceblue;
+            width: 145px;
+            padding: 7px 35px;
+            /* margin: 0px 10px; */
+            border-radius: 30px;
+            height: 30px;
+            margin: 19px 67px 0px 0px;
+            box-sizing: border-box;
+            transition: ease-in-out .2s;
+        }
+
+
+        #SignUpBut:hover
+        {
+            background-color: rgba(137, 43, 226, 0.66);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+
+        #SignUpBut:active
+        {
+            background-color: rgba(137, 43, 226, 0.308);
+        }
+
+
+
+        #ourTeamBut
+        {
+            margin: 13px 8px;
+            padding: 0px 15px;
+            color: white;
+            border-radius: 30px;
+            padding: 13px 18px;
+            cursor:pointer;
+            background-color: rgba(0, 0, 0, 0.511);
+        }
+
+
+
+        /* INTRO PARA */
+        #introPara
+        {
+            position: absolute;
+            top: 471px;
+            width:100%;
+            height: 400px;
+            background-color: rgb(81, 194, 231);
+            background: rgb(2,0,36);
+            /* background: #ADD8E6; */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-top: 5px solid yellow;
+            border-bottom: 5px solid yellow;
+        }
+
+
+        #introPara h1
+        {
+            font-size: 3.5rem;
+            text-align: center;
+            color: white;
+            border-top: 2px solid red;
+            border-bottom: 2px solid red;
+        }
+
+        
+        #introParaDescription
+        {
+            border-top: 2px solid lightblue;
+            border-bottom: 2px solid lightblue;
+            width: 95%;
+            line-height: 1.3;
+        }
+
+
+        #introPara p
+        {
+            color: white;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+
+
+        #meetOurTeamBox
+        {
+            position: absolute;
+            top: 881px;
+            width: 100%;
+            background-color: rgb(28, 28, 28);
+            /* background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 0%, rgba(62,59,49,1) 46%);; */
+            background-color: #060606;
+            background-color: rgb(9, 9, 9);
+            height: 550px;
+
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+        #meetOurTeamHeader
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        #meetOurTeamHeader h1
+        {
+            font-size: 3.5rem;
+            /* color: 	#BF40BF; */
+            /* color: rgb(29, 149, 254); */
+            color: white;
+            text-align: center;
+            border-top: 2px solid lightgreen;
+            border-bottom: 2px solid lightgreen;
+            display: inline;
+            background-image: linear-gradient(#00B4DB, #0083B0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        #meetOurTeamDisplay
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+
+
+        .memberDescriptionBox
+        {
+            display: grid;
+            /* background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%); */
+            background-color: black;
+            background-color: #222;
+            grid-template-rows: 3fr 0.5fr 0.5fr;
+            row-gap: 3px;
+
+            width: 250px;
+            height: 350px;
+            text-align:center;
+            /* border-top: 3px solid white;
+            border-bottom: 3px solid white;
+            border: 3px solid white;
+            border-radius: 10px; */
+            color: white;
+        }
+
+
+
+
+        .memberDescriptionBox img
+        {
+            width: 170px;
+            height: 170px;
+            border-radius: 170px;
+            border: 2px solid purple;
+        }
+
+
+
+
+        .memberDescriptionBox .imgBox
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .memberDescriptionBox .nameBox
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .memberDescriptionBox h2
+        {
+            border-top: 2px solid orange;
+            border-bottom: 2px solid orange;
+        }
+
+
+        .containerBox
+        {
+            background: linear-gradient(to right, red, purple);
+            width: 255px;
+            height: 355px;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .containerBox:hover
+        {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://img.icons8.com/nolan/512/fast-cart.png">
+        </div>
+        <nav>
+            <ul>
+                <a href="home.html" style="text-decoration: none; color: black"><li>Home</li></a>
+                <a href="aboutus.html" style="text-decoration: none; color: black"><li>About Us</li></a>
+                <a href="OurTeamPage.html" style="text-decoration: none; color: black"><li id="ourTeamBut">Our Team</li></a>
+                <a href="contactUs2.html" style="text-decoration: none; color: black">  <li>Contact Us</li></a>
+            </ul>
+        </nav>
+        <div id="register">
+                <div id="loginBut">Login</div>
+                <div id="SignUpBut">Sign Up</div>
+        </div>
+    </div>
+
+
+    <div id="introPara">
+        <div id="introParaHeader">
+            <h1>Our Team Objective</h1>
+        </div>
+        <div id="introParaDescription">
+            <p>
+As an e-commerce company, our objective is to revolutionize the way people shop by providing
+an exceptional online shopping experience. We aim to create a seamless and user-friendly website that
+not only offers a vast selection of high-quality products but also delivers convenience,
+reliability, and value to our customers. Our goal is to build strong customer relationships by prioritizing their needs and preferences, ensuring prompt and secure delivery, and offering competitive pricing. We strive to stay ahead of the competition by continuously innovating and leveraging technology to enhance our platform's functionality, optimize the user interface, and personalize the shopping journey.
+            </p>
+        </div>
+    </div>
+
+
+
+    <div id="meetOurTeamBox">
+        <div id="meetOurTeamHeader">
+            <h1>
+                Meet Our Team
+            </h1>
+        </div>
+        <div id="meetOurTeamDisplay">
+
+
+            <div class="containerBox">
+
+                 <a href="https://www.linkedin.com/in/archit-chhajed-717bb9180/" style="text-decoration: none
+                 ;"> <div class="memberDescriptionBox">
+                    
+                    
+                    
+                    <div class="imgBox">
+                        <img src="./Photo_Cropped.jpg" alt="img">
+                    </div>
+                    
+                    
+
+                    <div class="nameBox">
+                        <h2>Archit Chhajed</h2>
+                    </div>
+
+
+                    <h3>12213059</h3>
+                    
+                </div> </a>
+                
+            </div>
+
+            <div class="containerBox">
+
+                <a href="https://www.linkedin.com/in/harshita-sarraf-a06523257/" style="text-decoration: none
+                ;"><div class="memberDescriptionBox">
+                    
+                    
+                    <div class="imgBox">
+                        <img src="./Harshita_Saraf_Cropped.jpg" alt="img">
+                    </div>
+                    
+                    <div class="nameBox">
+
+                        <h2>Harshita Sarraf</h2>
+                    </div>
+
+                    <h3>12213043</h3>
+                    
+                </div></a>
+                
+            </div>
+
+
+
+            <div class="containerBox">
+
+                
+                <a href="https://www.linkedin.com/in/harshit-anand-698499263/" style="text-decoration: none
+                ;"> 
+                <div class="memberDescriptionBox">
+                    
+                    
+                    <div class="imgBox">
+                        <img src="./Harshit_Anand_Photo_Cropped.jpg" alt="img">
+                    </div>
+                    
+                    
+
+                    <div class="nameBox">
+
+                        <h2>Harshit Anand</h2>
+                    </div>
+
+
+                    <h3>12213053</h3>
+                    
+                </div></a>
+                
+            </div>
+
+
+
+
+            <div class="containerBox">
+
+                
+                <a href="https://www.linkedin.com/in/monika-joshi-28384a259/" style="text-decoration: none
+                ;"><div class="memberDescriptionBox">
+                    
+                    
+                    
+                    <div class="imgBox">
+                        <img src="./Monika_Photo_Cropped_3.jpg" alt="img">
+                    </div>
+                    
+                    
+
+
+
+
+
+
+                    <div class="nameBox">
+
+                        <h2>Monika</h2>
+                    </div>
+
+
+                    <h3>12213045</h3>
+                    
+                </div></a>
+                
+                
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
